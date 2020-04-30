@@ -141,8 +141,11 @@ echo '<pre>'.print_r($newTurnArray, true).'</pre>';
 echo '<br>';
 
 echo '<h2>Sieger:</h2>';
+
+
 print_r($newTurn->get_winner());
 
+echo 'Sieger: '.$newTurnArray['winner'].'';
 //teilnehmer auflisten
 $teilnehmer=array();
 
@@ -159,19 +162,18 @@ foreach($newTurn as $turnier){
 
 }
 
-
+unset($turnier);
 
 echo '<pre><h3>Teilnehmer</h3> <br> '.print_r($teilnehmer, true).'</pre>'; 
-
 
 
 $ranking=array();
 
 foreach($teilnehmer as $name){
     $ranking[$name] = array('name'=> $name, 'totalWins' => 0, 'totalSecond' => 0, 'totalThird' => 0, 'totalSitIn' => 0, 'totalMoney' => 0, 'totalProfit' => 0); 
-    foreach($newTurnArray as $key => $value){
-        if($value == $name){
-            echo ' '.$key.' + '.$value.'';
+    foreach($newTurnArray as $turnier){
+        if($turnier['winner'] == $name){
+            echo ' '.$turnier['winner'].' + '.$name.'';
             $ranking[$name]['totalWins']++;
             $ranking[$name]['totalSecond']++;
             $ranking[$name]['totalThird']++;
@@ -180,6 +182,8 @@ foreach($teilnehmer as $name){
     }
     
 }
+
+unset($turnier);
 
 echo '<pre><h3>Ranking:</h3> '.print_r($ranking, true).'</pre>'; 
 
