@@ -79,6 +79,16 @@ class Turnier {
     }
 //
 
+
+//Preisgeld ermitteln
+
+function totalMoney($data = array())
+{
+    $totalMoney = 0;
+    foreach ($data as )
+}
+//
+
 //tabelle anlegen
 function html_table($data = array())
 {
@@ -112,6 +122,19 @@ $newTurn->set_moneyFirst(22);
 $newTurn->set_moneySecond(11);
 $newTurn->set_moneyThird(5);
 
+// neues Turnier anlegen
+$newTurn2 = new Turnier();
+$newTurn2->set_date(20200430);
+$newTurn2->set_winner('Frank');
+$newTurn2->set_second('Flo');
+$newTurn2->set_third('Benni');
+//$newTurn2->forth = "Peter";
+$newTurn2->set_buyIn(20);
+$newTurn2->set_moneyFirst(200);
+$newTurn2->set_moneySecond(110);
+$newTurn2->set_moneyThird(50);
+
+
 echo '<div><h1>Rohdaten $newTurn</h1></div>';
 /*
 echo 'Datum: '.$newTurn->get_date().'<br>';
@@ -131,33 +154,33 @@ echo '<div><pre>'.print_r($newTurn, true).'</pre></div>';
 
 $newTurnArray = (array) $newTurn;
 
+$newTurnArray2 = (array) $newTurn2;
+
+$totalTurn = array($newTurnArray, $newTurnArray2);
 
 
-echo '<h1>Rohdaten $newTurnArray array</h1>';
+
+echo '<h1>$totalTurn</h1>';
 //
 
-echo '<pre>'.print_r($newTurnArray, true).'</pre>'; 
+echo '<pre>'.print_r($totalTurn, true).'</pre>'; 
 
 echo '<br>';
 
 echo '<h2>Sieger:</h2>';
 
-
-print_r($newTurn->get_winner());
-
-echo 'Sieger: '.$newTurnArray['winner'].'';
 //teilnehmer auflisten
 $teilnehmer=array();
 
-foreach($newTurn as $turnier){
-  if (!in_array($newTurn->get_winner(), $teilnehmer)){
-    $teilnehmer[]=$newTurn->get_winner();
+foreach($totalTurn as $turnier){
+  if (!in_array($turnier['winner'], $teilnehmer)){
+    $teilnehmer[]=$turnier['winner'];
   }
-  if (!in_array($newTurn->get_second(), $teilnehmer)){
-    $teilnehmer[]=$newTurn->get_second();
+  if (!in_array($turnier['second'], $teilnehmer)){
+    $teilnehmer[]=$turnier['second'];
   }
-  if (!in_array($newTurn->get_third(), $teilnehmer)){
-    $teilnehmer[]=$newTurn->get_third();
+  if (!in_array($turnier['winner'], $teilnehmer)){
+    $teilnehmer[]=$turnier['winner'];
   }
 
 }
@@ -171,13 +194,21 @@ $ranking=array();
 
 foreach($teilnehmer as $name){
     $ranking[$name] = array('name'=> $name, 'totalWins' => 0, 'totalSecond' => 0, 'totalThird' => 0, 'totalSitIn' => 0, 'totalMoney' => 0, 'totalProfit' => 0); 
-    foreach($newTurnArray as $turnier){
+    foreach($totalTurn as $turnier){
         if($turnier['winner'] == $name){
-            echo ' '.$turnier['winner'].' + '.$name.'';
             $ranking[$name]['totalWins']++;
+        }
+        if($turnier['second'] == $name){
             $ranking[$name]['totalSecond']++;
+        }
+        if($turnier['third'] == $name){
             $ranking[$name]['totalThird']++;
+        }
+        /*
+        if(in_array($name, $teilnehmer)){
             $ranking[$name]['totalSitIn']++;
+        }
+        */
         }
     }
     
