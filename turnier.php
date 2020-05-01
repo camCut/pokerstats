@@ -1,6 +1,6 @@
 <?php 
 
-class Turnier {
+class Tournament {
     //Eigenschaften
       public $date;
       public $winner;
@@ -18,13 +18,18 @@ class Turnier {
               $this->third,
           ];
       }
-      function getMoney(){
-          return [
-              $this->moneyFirst,
-              $this->moneySecond,
-              $this->moneyThird,
-          ];
-    }
+
+      function __construct($tournament)
+      {
+          $this->date = $tournament->date;
+          $this->winner = $tournament->winner;
+          $this->second = $tournament->second;
+          $this->third = $tournament->third;
+          $this->buyIn = $tournament->buyIn;
+          $this->moneyFirst = $tournament->moneyFirst;
+          $this->moneySecond = $tournament->moneySecond;
+          $this->moneyThird = $tournament->moneyThird;
+      }
     }
 
 ?>
