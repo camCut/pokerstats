@@ -28,5 +28,25 @@
     "moneyFirst": 60,
     "moneySecond": 30,
     "moneyThird": 15
+  },
+  {
+    "date": 1581562429,
+    "winner": "Frank",
+    "second": "Chris",
+    "third": "Seb",
+    "buyIn": 100,
+    "moneyFirst": 600,
+    "moneySecond": 300,
+    "moneyThird": 150
+  },
+  {
+    "date": 1581325429,
+    "winner": "Benni",
+    "second": "Flo",
+    "third": "Seb",
+    "buyIn": 50,
+    "moneyFirst": 300,
+    "moneySecond": 100,
+    "moneyThird": 50
   }
 ]

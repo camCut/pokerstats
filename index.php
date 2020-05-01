@@ -2,7 +2,7 @@
   <html>
   <head>
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
   </head>
   <body>
 
@@ -20,7 +20,7 @@ $ranking->printTournaments();
 ?>
 <br>
 <?php
-$ranking->printRanking();
+$ranking->printRankingProfit();
 
 ?>
 
