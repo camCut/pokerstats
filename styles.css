@@ -8,22 +8,22 @@ table, th, td {
 
 td {
     padding: 5px;
-    
+
 }
 th {
     padding: 5px;
-    
+
 }
-td.first {
+tr.first {
     background-color: gold;
 }
-td.second {
+tr.second {
     background-color: silver;
 }
-td.third {
+tr.third {
     background-color: burlywood;
 }
-td.rest {
+tr.rest {
     background-color: green;
 }
 table {
