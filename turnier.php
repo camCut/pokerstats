@@ -19,8 +19,12 @@ class Tournament {
           ];
       }
 
-      function __construct($tournament)
+      function __construct($tournament = null)
       {
+        if(!isset($tournament)){
+           return;
+        }
+        
           $this->date = $tournament->date;
           $this->winner = $tournament->winner;
           $this->second = $tournament->second;
