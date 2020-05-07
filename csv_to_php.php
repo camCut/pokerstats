@@ -9,10 +9,10 @@ $tournament->date = strtotime($csv[2][1]);
 $tournament->winner = $csv[12][1];
 $tournament->second = $csv[13][1];
 $tournament->third = $csv[14][1];
-$tournament->buyIn = $csv[6][1];
-$tournament->moneyFirst = $csv[12][2];
-$tournament->moneySecond = $csv[13][2];
-$tournament->moneyThird = $csv[14][2];
+$tournament->buyIn = (int)$csv[6][1];
+$tournament->moneyFirst = (int)$csv[12][2];
+$tournament->moneySecond = (int)$csv[13][2];
+$tournament->moneyThird = (int)$csv[14][2];
 $tournament->participants = [];
 
 for($i = 12; $i<count($csv); $i++){
@@ -25,11 +25,17 @@ for($i = 12; $i<count($csv); $i++){
 
 echo '<pre>';
 var_dump($tournament);
-
 echo'</pre>';
-$arr = $tournament->participants;
-$json = json_encode($arr);
-echo '<pre>';
-var_dump($json, JSON_FORCE_OBJECT);
-echo '</pre>';
+
+//open or read json data
+$data_results = file_get_contents('tournaments.json');
+$tempArray = json_decode($data_results);
+
+//append additional json to json file
+$tempArray[] = $tournament ;
+$jsonData = json_encode($tempArray, JSON_PRETTY_PRINT);
+
+file_put_contents('tournaments.json', $jsonData);   
+
+
 ?>

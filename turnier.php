@@ -1,6 +1,7 @@
 <?php 
 
-class Tournament {
+class Tournament 
+{
     //Eigenschaften
       public $date;
       public $winner;
@@ -34,6 +35,8 @@ class Tournament {
           $this->moneySecond = $tournament->moneySecond;
           $this->moneyThird = $tournament->moneyThird;
       }
-    }
+}
+
+
 
 ?>
