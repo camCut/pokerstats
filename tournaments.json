@@ -1,124 +1,997 @@
 [
     {
-        "date": 1572332429,
-        "winner": "Benni",
-        "second": "Thom",
-        "third": "Flo",
-        "buyIn": 10,
-        "moneyFirst": 80,
-        "moneySecond": 50,
-        "moneyThird": 20
+        "date": 1584658800,
+        "winner": "AnthonySambini",
+        "second": "Daladies81",
+        "third": "Bronski0714",
+        "buyIn": 5,
+        "moneyFirst": 20,
+        "moneySecond": 10,
+        "moneyThird": 0,
+        "participants": [
+            "AnthonySambini",
+            "Daladies81",
+            "Bronski0714",
+            "Weltrat111",
+            "BennyTillHansen",
+            "Kaikeymaster1"
+        ]
     },
     {
-        "date": 1585322429,
-        "winner": "Shabby",
-        "second": "Benni",
-        "third": "Flo",
+        "date": 1585263600,
+        "winner": "BennyTillHansen",
+        "second": "Kaikeymaster1",
+        "third": "OnkelSchosch",
+        "buyIn": 5,
+        "moneyFirst": 36,
+        "moneySecond": 24,
+        "moneyThird": 12,
+        "participants": [
+            "BennyTillHansen",
+            "Kaikeymaster1",
+            "OnkelSchosch",
+            "bCid_de",
+            "TheGreatest1990",
+            "Anthony Sambini",
+            "Dschannien",
+            "Artie van Delay",
+            "Kasule069",
+            "FG1983000",
+            "Weltrat111",
+            "Bronski0714",
+            "xot16",
+            "IlseMacket",
+            "Daladies81",
+            "Skill&Tens"
+        ]
+    },
+    {
+        "date": 1585263600,
+        "winner": "Ilse Macket",
+        "second": "bCid_de",
+        "third": "OnkelSchosch",
+        "buyIn": 5,
+        "moneyFirst": 22,
+        "moneySecond": 13,
+        "moneyThird": 9,
+        "participants": [
+            "Ilse Macket",
+            "bCid_de",
+            "OnkelSchosch",
+            "Kasule069",
+            "Daladies81",
+            "Weltrat111",
+            "Skill&Tens",
+            "AnthonySambini",
+            "xot16"
+        ]
+    },
+    {
+        "date": 1585350000,
+        "winner": "bCid_de",
+        "second": "Weltrat111",
+        "third": "TheGreatest1990",
+        "buyIn": 10,
+        "moneyFirst": 45,
+        "moneySecond": 27,
+        "moneyThird": 18,
+        "participants": [
+            "bCid_de",
+            "Weltrat111",
+            "TheGreatest1990",
+            "Skill&Tens",
+            "Xinaj",
+            "xot16",
+            "Kaikeymaster1",
+            "Daladies81",
+            "AnthonySambini"
+        ]
+    },
+    {
+        "date": 1585350000,
+        "winner": "Daladies81",
+        "second": "Ilse Macket",
+        "third": "Xinaj",
+        "buyIn": 2,
+        "moneyFirst": 10,
+        "moneySecond": 0,
+        "moneyThird": 0,
+        "participants": [
+            "Daladies81",
+            "Ilse Macket",
+            "Xinaj",
+            "AnthonySambini"
+        ]
+    },
+    {
+        "date": 1585350000,
+        "winner": "Daladies81",
+        "second": "AnthonySambini",
+        "third": "ahfmuh",
+        "buyIn": 5,
+        "moneyFirst": 20,
+        "moneySecond": 12,
+        "moneyThird": 8,
+        "participants": [
+            "Daladies81",
+            "AnthonySambini",
+            "ahfmuh",
+            "Ilse Macket",
+            "Xinaj",
+            "MaxOwaR111"
+        ]
+    },
+    {
+        "date": 1585350000,
+        "winner": "ahfmuh",
+        "second": "Xinaj",
+        "third": "Daladies81",
+        "buyIn": 5,
+        "moneyFirst": 30,
+        "moneySecond": 0,
+        "moneyThird": 0,
+        "participants": [
+            "ahfmuh",
+            "Xinaj",
+            "Daladies81",
+            "MaxOwaR111"
+        ]
+    },
+    {
+        "date": 1585605600,
+        "winner": "Weltrat111",
+        "second": "Gereul",
+        "third": "Artie van Delay",
+        "buyIn": 5,
+        "moneyFirst": 22,
+        "moneySecond": 13,
+        "moneyThird": 9,
+        "participants": [
+            "Weltrat111",
+            "Gereul",
+            "Artie van Delay",
+            "Isachen185",
+            "Daladies81",
+            "Dschannien",
+            "derm\u00f6rder",
+            "AnthonySambini",
+            "TheGreatest1990"
+        ]
+    },
+    {
+        "date": 1585692000,
+        "winner": "Weltrat111",
+        "second": "Daladies81",
+        "third": "AnthonySambini",
+        "buyIn": 5,
+        "moneyFirst": 22,
+        "moneySecond": 13,
+        "moneyThird": 9,
+        "participants": [
+            "Weltrat111",
+            "Daladies81",
+            "AnthonySambini",
+            "Bronski0714",
+            "TheGreatest1990",
+            "Kaikeymaster1",
+            "Skill&Tens",
+            "BennyTillHansen",
+            "FG1983000"
+        ]
+    },
+    {
+        "date": 1585778400,
+        "winner": "simon31791",
+        "second": "Daladies81",
+        "third": "Ilse Macket",
+        "buyIn": 5,
+        "moneyFirst": 30,
+        "moneySecond": 0,
+        "moneyThird": 0,
+        "participants": [
+            "simon31791",
+            "Daladies81",
+            "Ilse Macket",
+            "Bronski0714",
+            "TheGreatest1990",
+            "Kaikeymaster1",
+            "Skill&Tens",
+            "BennyTillHansen",
+            "FG1983000"
+        ]
+    },
+    {
+        "date": 1585864800,
+        "winner": "Weltrat111",
+        "second": "AnthonySambini",
+        "third": "FG1983000",
+        "buyIn": 3,
+        "moneyFirst": 15,
+        "moneySecond": 0,
+        "moneyThird": 0,
+        "participants": [
+            "Weltrat111",
+            "AnthonySambini",
+            "FG1983000",
+            "Dschannien"
+        ]
+    },
+    {
+        "date": 1585864800,
+        "winner": "Weltrat111",
+        "second": "Ilse Macket",
+        "third": "Artie van Delay",
+        "buyIn": 10,
+        "moneyFirst": 76,
+        "moneySecond": 51,
+        "moneyThird": 25,
+        "participants": [
+            "Weltrat111",
+            "Ilse Macket",
+            "Artie van Delay",
+            "Daladies81",
+            "Kasule069",
+            "Isachen185",
+            "Gereul",
+            "ahfmuh",
+            "AnthonySambini",
+            "xot16",
+            "bCid_de",
+            "simon31791",
+            "TheGreatest1990",
+            "OnkelSchosch",
+            "FG1983000",
+            "Bronski0714"
+        ]
+    },
+    {
+        "date": 1585864800,
+        "winner": "TheGreatest1990 (Germany), \u20ac13,50 (50%)",
+        "second": "Daladies81",
+        "third": "Kasule069 ",
+        "buyIn": 3,
+        "moneyFirst": 13,
+        "moneySecond": 8,
+        "moneyThird": 5,
+        "participants": [
+            "TheGreatest1990 (Germany), \u20ac13,50 (50%)",
+            "Daladies81",
+            "Kasule069 ",
+            "xot16",
+            "AnthonySambini",
+            "xinaj ",
+            "bCid_de",
+            "Skill&Tens"
+        ]
+    },
+    {
+        "date": 1585951200,
+        "winner": "xot16",
+        "second": "bCid_de",
+        "third": "Kasule069 ",
+        "buyIn": 5,
+        "moneyFirst": 25,
+        "moneySecond": 15,
+        "moneyThird": 10,
+        "participants": [
+            "xot16",
+            "bCid_de",
+            "Kasule069 ",
+            "xinaj ",
+            "ahfmuh",
+            "Daladies81",
+            "Skill&Tens",
+            "TheGreatest1990 (Germany), \u20ac13,50 (50%)",
+            "AnthonySambini"
+        ]
+    },
+    {
+        "date": 1585951200,
+        "winner": "Ilse Macket",
+        "second": "Kasule069 ",
+        "third": "Daladies81",
+        "buyIn": 3,
+        "moneyFirst": 18,
+        "moneySecond": 0,
+        "moneyThird": 0,
+        "participants": [
+            "Ilse Macket",
+            "Kasule069 ",
+            "Daladies81",
+            "AnthonySambini",
+            "Skill&Tens"
+        ]
+    },
+    {
+        "date": 1585951200,
+        "winner": "Kasule069 ",
+        "second": "xinaj ",
+        "third": "Daladies81",
+        "buyIn": 5,
+        "moneyFirst": 17,
+        "moneySecond": 10,
+        "moneyThird": 7,
+        "participants": [
+            "Kasule069 ",
+            "xinaj ",
+            "Daladies81",
+            "TheGreatest1990 ",
+            "xot16",
+            "AnthonySambini",
+            "ahfmuh"
+        ]
+    },
+    {
+        "date": 1585951200,
+        "winner": "AnthonySambini",
+        "second": "Daladies81",
+        "third": "xot16",
+        "buyIn": 3,
+        "moneyFirst": 21,
+        "moneySecond": 0,
+        "moneyThird": 0,
+        "participants": [
+            "AnthonySambini",
+            "Daladies81",
+            "xot16",
+            "Kasule069 ",
+            "TheGreatest1990 "
+        ]
+    },
+    {
+        "date": 1586037600,
+        "winner": "RomanReuberson",
+        "second": "Globetrotter94",
+        "third": "TheGreatest1990 ",
+        "buyIn": 3,
+        "moneyFirst": 13,
+        "moneySecond": 8,
+        "moneyThird": 5,
+        "participants": [
+            "RomanReuberson",
+            "Globetrotter94",
+            "TheGreatest1990 ",
+            "OnkelSchosch",
+            "bCid_de",
+            "derm\u00f6rder",
+            "Daladies81",
+            "AnthonySambini",
+            "Weltrat111"
+        ]
+    },
+    {
+        "date": 1586037600,
+        "winner": "derm\u00f6rder",
+        "second": "OnkelSchosch",
+        "third": "AnthonySambini",
+        "buyIn": 3,
+        "moneyFirst": 12,
+        "moneySecond": 7,
+        "moneyThird": 4,
+        "participants": [
+            "derm\u00f6rder",
+            "OnkelSchosch",
+            "AnthonySambini",
+            "Daladies81",
+            "Globetrotter94",
+            "TheGreatest1990 ",
+            "Weltrat111",
+            "bCid_de"
+        ]
+    },
+    {
+        "date": 1586210400,
+        "winner": "AnthonySambini",
+        "second": "derm\u00f6rder",
+        "third": "Schizo85",
+        "buyIn": 5,
+        "moneyFirst": 22,
+        "moneySecond": 13,
+        "moneyThird": 9,
+        "participants": [
+            "AnthonySambini",
+            "derm\u00f6rder",
+            "Schizo85",
+            "TheGreatest1990 ",
+            "Weltrat111",
+            "Bronski0714",
+            "Daladies81",
+            "Skill&Tens",
+            "OnkelSchosch"
+        ]
+    },
+    {
+        "date": 1586210400,
+        "winner": "OnkelSchosch",
+        "second": "Skill&Tens",
+        "third": "Schizo85",
+        "buyIn": 5,
+        "moneyFirst": 25,
+        "moneySecond": 15,
+        "moneyThird": 10,
+        "participants": [
+            "OnkelSchosch",
+            "Skill&Tens",
+            "Schizo85",
+            "derm\u00f6rder",
+            "Weltrat111",
+            "AnthonySambini",
+            "Daladies81",
+            "Bronski0714",
+            "TheGreatest1990 "
+        ]
+    },
+    {
+        "date": 1586383200,
+        "winner": "Schizo85",
+        "second": "derm\u00f6rder",
+        "third": "FG1983000",
+        "buyIn": 5,
+        "moneyFirst": 20,
+        "moneySecond": 12,
+        "moneyThird": 8,
+        "participants": [
+            "Schizo85",
+            "derm\u00f6rder",
+            "FG1983000",
+            "Daladies81",
+            "OnkelSchosch",
+            "AnthonySambini"
+        ]
+    },
+    {
+        "date": 1586383200,
+        "winner": "Daladies81",
+        "second": "FG1983000",
+        "third": "Bronski0714",
+        "buyIn": 5,
+        "moneyFirst": 27,
+        "moneySecond": 16,
+        "moneyThird": 11,
+        "participants": [
+            "Daladies81",
+            "FG1983000",
+            "Bronski0714",
+            "TheGreatest1990 ",
+            "derm\u00f6rder",
+            "AnthonySambini",
+            "Schizo85",
+            "OnkelSchosch"
+        ]
+    },
+    {
+        "date": 1586383200,
+        "winner": "Daladies81",
+        "second": "AnthonySambini",
+        "third": "Schizo85",
+        "buyIn": 3,
+        "moneyFirst": 18,
+        "moneySecond": 0,
+        "moneyThird": 0,
+        "participants": [
+            "Daladies81",
+            "AnthonySambini",
+            "Schizo85",
+            "Ilse Macket",
+            "Bronski0714"
+        ]
+    },
+    {
+        "date": 1586556000,
+        "winner": "Schizo85",
+        "second": "OnkelSchosch",
+        "third": "Daladies81",
+        "buyIn": 3,
+        "moneyFirst": 15,
+        "moneySecond": 9,
+        "moneyThird": 6,
+        "participants": [
+            "Schizo85",
+            "OnkelSchosch",
+            "Daladies81",
+            "weltrat111",
+            "FG1983000",
+            "derm\u00f6rder",
+            "bCid_de",
+            "AnthonySambini"
+        ]
+    },
+    {
+        "date": 1586556000,
+        "winner": "AnthonySambini",
+        "second": "FG1983000",
+        "third": "xot16",
+        "buyIn": 20,
+        "moneyFirst": 198,
+        "moneySecond": 132,
+        "moneyThird": 66,
+        "participants": [
+            "AnthonySambini",
+            "FG1983000",
+            "xot16",
+            "Ilse Macket",
+            "bCid_de",
+            "xinaj ",
+            "RomanReuberson",
+            "Bronski0714",
+            "TheGreatest1990 ",
+            "ahfmuh",
+            "weltrat111",
+            "Schizo85",
+            "derm\u00f6rder",
+            "OnkelSchosch",
+            "simon31791",
+            "Daladies81",
+            "Sascha71189",
+            "cyprezz"
+        ]
+    },
+    {
+        "date": 1586556000,
+        "winner": "Daladies81",
+        "second": "AnthonySambini",
+        "third": "weltrat111",
+        "buyIn": 5,
+        "moneyFirst": 37,
+        "moneySecond": 22,
+        "moneyThird": 15,
+        "participants": [
+            "Daladies81",
+            "AnthonySambini",
+            "weltrat111",
+            "bCid_de",
+            "derm\u00f6rder",
+            "Bronski0714",
+            "RomanReuberson",
+            "Schizo85",
+            "xot16"
+        ]
+    },
+    {
+        "date": 1586642400,
+        "winner": "weltrat111",
+        "second": "derm\u00f6rder",
+        "third": "Daladies81",
         "buyIn": 5,
         "moneyFirst": 50,
         "moneySecond": 30,
-        "moneyThird": 10
+        "moneyThird": 20,
+        "participants": [
+            "weltrat111",
+            "derm\u00f6rder",
+            "Daladies81",
+            "TheGreatest1990 ",
+            "AnthonySambini",
+            "OnkelSchosch",
+            "RomanReuberson",
+            "FG1983000"
+        ]
     },
     {
-        "date": 1581322429,
-        "winner": "Shabby",
-        "second": "Benni",
-        "third": "Thom",
+        "date": 1586642400,
+        "winner": "AnthonySambini",
+        "second": "Daladies81",
+        "third": "OnkelSchosch",
+        "buyIn": 3,
+        "moneyFirst": 16,
+        "moneySecond": 9,
+        "moneyThird": 6,
+        "participants": [
+            "AnthonySambini",
+            "Daladies81",
+            "OnkelSchosch",
+            "FG1983000",
+            "weltrat111",
+            "RomanReuberson"
+        ]
+    },
+    {
+        "date": 1586728800,
+        "winner": "Schizo85",
+        "second": "Daladies81",
+        "third": "weltrat111",
+        "buyIn": 3,
+        "moneyFirst": 13,
+        "moneySecond": 8,
+        "moneyThird": 5,
+        "participants": [
+            "Schizo85",
+            "Daladies81",
+            "weltrat111",
+            "derm\u00f6rder",
+            "OnkelSchosch",
+            "Bronski0714",
+            "AnthonySambini"
+        ]
+    },
+    {
+        "date": 1586728800,
+        "winner": "OnkelSchosch",
+        "second": "derm\u00f6rder",
+        "third": "Schizo85",
+        "buyIn": 5,
+        "moneyFirst": 25,
+        "moneySecond": 15,
+        "moneyThird": 10,
+        "participants": [
+            "OnkelSchosch",
+            "derm\u00f6rder",
+            "Schizo85",
+            "Daladies81",
+            "weltrat111",
+            "AnthonySambini"
+        ]
+    },
+    {
+        "date": 1586815200,
+        "winner": "Schizo85",
+        "second": "Artie van Delay",
+        "third": "AnthonySambini",
+        "buyIn": 5,
+        "moneyFirst": 32,
+        "moneySecond": 19,
+        "moneyThird": 13,
+        "participants": [
+            "Schizo85",
+            "Artie van Delay",
+            "AnthonySambini",
+            "OnkelSchosch",
+            "derm\u00f6rder",
+            "Daladies81",
+            "bCid_de",
+            "weltrat111",
+            "Dschannien"
+        ]
+    },
+    {
+        "date": 1586815200,
+        "winner": "OnkelSchosch",
+        "second": "bCid_de",
+        "third": "Bronski0714",
+        "buyIn": 5,
+        "moneyFirst": 20,
+        "moneySecond": 12,
+        "moneyThird": 8,
+        "participants": [
+            "OnkelSchosch",
+            "bCid_de",
+            "Bronski0714",
+            "derm\u00f6rder",
+            "AnthonySambini",
+            "Daladies81",
+            "Globetrotter94",
+            "Schizo85"
+        ]
+    },
+    {
+        "date": 1586815200,
+        "winner": "bCid_de",
+        "second": "Bronski0714",
+        "third": "derm\u00f6rder",
+        "buyIn": 5,
+        "moneyFirst": 20,
+        "moneySecond": 12,
+        "moneyThird": 8,
+        "participants": [
+            "bCid_de",
+            "Bronski0714",
+            "derm\u00f6rder",
+            "OnkelSchosch",
+            "AnthonySambini",
+            "Daladies81",
+            "Schizo85",
+            "Globetrotter94"
+        ]
+    },
+    {
+        "date": 1586901600,
+        "winner": "xot16",
+        "second": "OnkelSchosch",
+        "third": "derm\u00f6rder",
+        "buyIn": 5,
+        "moneyFirst": 22,
+        "moneySecond": 13,
+        "moneyThird": 9,
+        "participants": [
+            "xot16",
+            "OnkelSchosch",
+            "derm\u00f6rder",
+            "weltrat111",
+            "Daladies81",
+            "Bronski0714"
+        ]
+    },
+    {
+        "date": 1586901600,
+        "winner": "IlseMacket",
+        "second": "OnkelSchosch",
+        "third": "Daladies81",
+        "buyIn": 2,
+        "moneyFirst": 8,
+        "moneySecond": 0,
+        "moneyThird": 0,
+        "participants": [
+            "IlseMacket",
+            "OnkelSchosch",
+            "Daladies81",
+            "derm\u00f6rder"
+        ]
+    },
+    {
+        "date": 1587074400,
+        "winner": "OnkelSchosch",
+        "second": "Daladies81",
+        "third": "Skill&Tens",
+        "buyIn": 10,
+        "moneyFirst": 80,
+        "moneySecond": 48,
+        "moneyThird": 32,
+        "participants": [
+            "OnkelSchosch",
+            "Daladies81",
+            "Skill&Tens",
+            "Schizo85",
+            "bCid_de",
+            "weltrat111",
+            "IlseMacket",
+            "xot16",
+            "FG1983000",
+            "BennyTillHansen",
+            "AnthonySambini",
+            "derm\u00f6rder",
+            "TheGreatest1990 "
+        ]
+    },
+    {
+        "date": 1587074400,
+        "winner": "FG1983000",
+        "second": "Daladies81",
+        "third": "OnkelSchosch",
+        "buyIn": 5,
+        "moneyFirst": 22,
+        "moneySecond": 13,
+        "moneyThird": 9,
+        "participants": [
+            "FG1983000",
+            "Daladies81",
+            "OnkelSchosch",
+            "AnthonySambini",
+            "xot16",
+            "bCid_de",
+            "Schizo85",
+            "derm\u00f6rder"
+        ]
+    },
+    {
+        "date": 1587074400,
+        "winner": "bCid_de",
+        "second": "Skill&Tens",
+        "third": "derm\u00f6rder",
+        "buyIn": 5,
+        "moneyFirst": 17,
+        "moneySecond": 10,
+        "moneyThird": 7,
+        "participants": [
+            "bCid_de",
+            "Skill&Tens",
+            "derm\u00f6rder",
+            "Schizo85",
+            "Daladies81",
+            "AnthonySambini",
+            "OnkelSchosch"
+        ]
+    },
+    {
+        "date": 1587247200,
+        "winner": "Schizo85",
+        "second": "derm\u00f6rder",
+        "third": "AnthonySambini",
+        "buyIn": 11,
+        "moneyFirst": 56,
+        "moneySecond": 24,
+        "moneyThird": 0,
+        "participants": [
+            "Schizo85",
+            "derm\u00f6rder",
+            "AnthonySambini",
+            "Daladies81",
+            "OnkelSchosch"
+        ]
+    },
+    {
+        "date": 1587074400,
+        "winner": "Daladies81",
+        "second": "Schizo85",
+        "third": "AnthonySambini",
+        "buyIn": 5,
+        "moneyFirst": 21,
+        "moneySecond": 9,
+        "moneyThird": 0,
+        "participants": [
+            "Daladies81",
+            "Schizo85",
+            "AnthonySambini",
+            "OnkelSchosch",
+            "derm\u00f6rder"
+        ]
+    },
+    {
+        "date": 1587074400,
+        "winner": "FG1983000",
+        "second": "Daladies81",
+        "third": "simon31791",
+        "buyIn": 5,
+        "moneyFirst": 22,
+        "moneySecond": 13,
+        "moneyThird": 9,
+        "participants": [
+            "FG1983000",
+            "Daladies81",
+            "simon31791",
+            "Schizo85",
+            "OnkelSchosch",
+            "AnthonySambini",
+            "derm\u00f6rder"
+        ]
+    },
+    {
+        "date": 1587506400,
+        "winner": "FG1983000",
+        "second": "bCid_de",
+        "third": "derm\u00f6rder",
+        "buyIn": 5,
+        "moneyFirst": 27,
+        "moneySecond": 16,
+        "moneyThird": 11,
+        "participants": [
+            "FG1983000",
+            "bCid_de",
+            "derm\u00f6rder",
+            "Daladies81",
+            "OnkelSchosch",
+            "AnthonySambini",
+            "Schizo85"
+        ]
+    },
+    {
+        "date": 1587506400,
+        "winner": "FG1983000",
+        "second": "Daladies81",
+        "third": "TheGreatest1990 ",
+        "buyIn": 5,
+        "moneyFirst": 25,
+        "moneySecond": 15,
+        "moneyThird": 10,
+        "participants": [
+            "FG1983000",
+            "Daladies81",
+            "TheGreatest1990 ",
+            "bCid_de",
+            "derm\u00f6rder",
+            "Bronski0714",
+            "OnkelSchosch",
+            "AnthonySambini",
+            "Schizo85"
+        ]
+    },
+    {
+        "date": 1587679200,
+        "winner": "Schizo85",
+        "second": "OnkelSchosch",
+        "third": "FG1983000",
+        "buyIn": 10,
+        "moneyFirst": 50,
+        "moneySecond": 30,
+        "moneyThird": 20,
+        "participants": [
+            "Schizo85",
+            "OnkelSchosch",
+            "FG1983000",
+            "AnthonySambini",
+            "bCid_de",
+            "Daladies81"
+        ]
+    },
+    {
+        "date": 1587679200,
+        "winner": "Daladies81",
+        "second": "Schizo85",
+        "third": "Artie van Delay",
+        "buyIn": 5,
+        "moneyFirst": 27,
+        "moneySecond": 16,
+        "moneyThird": 11,
+        "participants": [
+            "Daladies81",
+            "Schizo85",
+            "Artie van Delay",
+            "weltrat111",
+            "AnthonySambini",
+            "OnkelSchosch",
+            "FG1983000",
+            "bCid_de"
+        ]
+    },
+    {
+        "date": 1587765600,
+        "winner": "OnkelSchosch",
+        "second": "xot16",
+        "third": "derm\u00f6rder",
+        "buyIn": 20,
+        "moneyFirst": 120,
+        "moneySecond": 72,
+        "moneyThird": 48,
+        "participants": [
+            "OnkelSchosch",
+            "xot16",
+            "derm\u00f6rder",
+            "TheGreatest1990 ",
+            "Daladies81",
+            "ackb4r",
+            "AnthonySambini",
+            "FG1983000",
+            "ahfmuh",
+            "IlseMacket",
+            "simon31791"
+        ]
+    },
+    {
+        "date": 1587765600,
+        "winner": "OnkelSchosch",
+        "second": "IlseMacket",
+        "third": "Daladies81",
         "buyIn": 10,
         "moneyFirst": 60,
-        "moneySecond": 30,
-        "moneyThird": 15
-    },
-    {
-        "date": 1581562429,
-        "winner": "Frank",
-        "second": "Chris",
-        "third": "Seb",
-        "buyIn": 100,
-        "moneyFirst": 600,
-        "moneySecond": 300,
-        "moneyThird": 150
-    },
-    {
-        "date": 1581325429,
-        "winner": "Benni",
-        "second": "Flo",
-        "third": "Seb",
-        "buyIn": 50,
-        "moneyFirst": 300,
-        "moneySecond": 100,
-        "moneyThird": 50
-    },
-    {
-        "date": 1584658800,
-        "winner": "AnthonySambini",
-        "second": "Daladies81",
-        "third": "Bronski0714",
-        "buyIn": 5,
-        "moneyFirst": 20,
-        "moneySecond": 10,
-        "moneyThird": 0,
+        "moneySecond": 36,
+        "moneyThird": 24,
         "participants": [
-            "AnthonySambini",
+            "OnkelSchosch",
+            "IlseMacket",
             "Daladies81",
-            "Bronski0714",
-            "Weltrat111",
-            "BennyTillHansen",
-            "Kaikeymaster1"
+            "xot16",
+            "AnthonySambini",
+            "Artie van Delay",
+            "FG1983000",
+            "derm\u00f6rder",
+            "ackb4r"
         ]
     },
     {
-        "date": 1584658800,
-        "winner": "AnthonySambini",
-        "second": "Daladies81",
-        "third": "Bronski0714",
+        "date": 1587765600,
+        "winner": "IlseMacket",
+        "second": "xot16",
+        "third": "OnkelSchosch",
         "buyIn": 5,
-        "moneyFirst": 20,
-        "moneySecond": 10,
-        "moneyThird": 0,
+        "moneyFirst": 15,
+        "moneySecond": 9,
+        "moneyThird": 6,
         "participants": [
-            "AnthonySambini",
+            "IlseMacket",
+            "xot16",
+            "OnkelSchosch",
             "Daladies81",
-            "Bronski0714",
-            "Weltrat111",
-            "BennyTillHansen",
-            "Kaikeymaster1"
+            "derm\u00f6rder",
+            "AnthonySambini"
         ]
     },
     {
-        "date": 1584658800,
-        "winner": "AnthonySambini",
-        "second": "Daladies81",
-        "third": "Bronski0714",
+        "date": 1587852000,
+        "winner": "IlseMacket",
+        "second": "ahfmuh",
+        "third": "Daladies81",
         "buyIn": 5,
-        "moneyFirst": 20,
-        "moneySecond": 10,
-        "moneyThird": 0,
+        "moneyFirst": 22,
+        "moneySecond": 13,
+        "moneyThird": 9,
         "participants": [
-            "AnthonySambini",
+            "IlseMacket",
+            "ahfmuh",
             "Daladies81",
-            "Bronski0714",
-            "Weltrat111",
-            "BennyTillHansen",
-            "Kaikeymaster1"
-        ]
-    },
-    {
-        "date": 1584658800,
-        "winner": "AnthonySambini",
-        "second": "Daladies81",
-        "third": "Bronski0714",
-        "buyIn": 5,
-        "moneyFirst": 20,
-        "moneySecond": 10,
-        "moneyThird": 0,
-        "participants": [
             "AnthonySambini",
-            "Daladies81",
-            "Bronski0714",
-            "Weltrat111",
-            "BennyTillHansen",
-            "Kaikeymaster1"
+            "xinaj ",
+            "OnkelSchosch",
+            "xot16",
+            "derm\u00f6rder"
         ]
     }
 ]

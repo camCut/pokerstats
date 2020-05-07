@@ -26,9 +26,9 @@ $ranking->loadTournaments();
 
 <?php
 
-$ranking->printTournaments();
+//$ranking->printTournaments();
 $ranking->printRankingProfit();
-echo '<pre>'.print_r(($ranking), true).'</pre>'; 
+//echo '<pre>'.print_r(($ranking), true).'</pre>'; 
 
 ?>
 
