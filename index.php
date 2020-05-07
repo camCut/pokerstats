@@ -1,7 +1,6 @@
 <?php
 
 //Turnier Klasse erstellen
-require "./csv_to_php.php";
 require "./turnier.php";
 require "./ranking.php";
 
