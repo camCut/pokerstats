@@ -18,37 +18,50 @@ class Ranking
     {
         $ranking = [];
         foreach ($this->tournaments as $tournament) {
-            $participants = $tournament->getParticipants();
+            $participants = $tournament->participants;
 
             foreach ($participants as $participant) {
                 if (!array_key_exists($participant, $ranking)) {
                     $ranking[$participant] = array('name' => $participant, 'totalWins' => 0, 'totalSecond' => 0, 'totalThird' => 0, 'totalSitIn' => 0, 'totalMoney' => 0, 'totalProfit' => 0, 'headsUp' => 0);
                 }
-
                 $ranking[$participant]['totalProfit'] -= $tournament->buyIn;
 
-                if ($tournament->winner == $participant) {
-                    $ranking[$participant]['totalWins']++;
-                    $ranking[$participant]['totalSitIn']++;
-                    $ranking[$participant]['totalProfit'] += $tournament->moneyFirst;
-                    $ranking[$participant]['totalMoney'] += $tournament->moneyFirst;
-                    $ranking[$participant]['headsUp'] += 1;
-                }
-                if ($tournament->second == $participant) {
-                    $ranking[$participant]['totalSecond']++;
-                    $ranking[$participant]['totalSitIn']++;
-                    $ranking[$participant]['totalProfit'] += $tournament->moneySecond;
-                    $ranking[$participant]['totalMoney'] += $tournament->moneySecond;
-                    $ranking[$participant]['headsUp'] += 1;
-                }
-                if ($tournament->third == $participant) {
-                    $ranking[$participant]['totalThird']++;
-                    $ranking[$participant]['totalSitIn']++;
-                    $ranking[$participant]['totalProfit'] += $tournament->moneyThird;
-                    $ranking[$participant]['totalMoney'] += $tournament->moneyThird;
-                }
+                    
+                $i = 0;
+
+                    if ($tournament->participants[$i] == $participant  && $tournament->payOut[$i] != "" ) {
+                        //$ranking[$participant]['headsUp']++;             
+                            $ranking[$participant]['totalMoney'] += intval($tournament->payOut[$i]);
+                            $ranking[$participant]['totalProfit'] += intval($tournament->payOut[$i]);
+                            $ranking[$participant]['totalSitIn'] ++;
+                    }
+
+                    if($tournament->participants[0] == $participant ){
+                            $ranking[$participant]['totalWins'] ++;
+                            $ranking[$participant]['headsUp'] ++;
+                            $ranking[$participant]['totalSitIn'] ++;
+                    }
+
+                    if($tournament->participants[1] == $participant ){
+                            $ranking[$participant]['totalSecond'] ++;
+                            $ranking[$participant]['headsUp'] ++;
+                            $ranking[$participant]['totalSitIn'] ++;
+                    }
+
+                    if($tournament->participants[2] == $participant ){
+                            $ranking[$participant]['totalThird'] ++;
+                            $ranking[$participant]['totalSitIn'] ++;
+                    }
+
+                    if ($tournament->participants[$i] == $participant) {
+                            $ranking[$participant]['totalSitIn'] ++;
+                            $i++;                            
+                    }
             }
 
+            //echo '<pre>';
+            //var_dump($ranking);
+            //echo '</pre>';
         }
         return $ranking;
 
@@ -107,7 +120,7 @@ class Ranking
                     <td>" . $row['totalMoney'] . "&euro;</td>
                     <td>" . $row['totalProfit'] . "&euro;</td>
                     <td>" . $row['headsUp'] . "</td>
-                    <td>" . intval($row['headsUp'] / $row['totalSitIn'] * 100) . "%</td>
+                    <td>" .intval($row['headsUp'] / $row['totalSitIn'] * 100) . "%</td>
                     </tr>";
         }
 

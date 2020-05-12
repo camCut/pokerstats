@@ -51,14 +51,14 @@ function renderTournamentChart() {
   const series = Object.keys(rankingData).map(name => ({
     name: name, data: tournamentData.reduce((prev, tournament) => {
       let profit = prev.length === 0 ? 0 : prev[prev.length - 1];
-      if (name === tournament.winner) {
-        profit += tournament.moneyFirst - tournament.buyIn;
+      if (name === tournament.participants[0]) {
+        profit += tournament.payOut[0] - tournament.buyIn;
       }
-      if (name === tournament.second) {
-        profit += tournament.moneySecond - tournament.buyIn;
+      if (name === tournament.participants[1]) {
+        profit += tournament.payOut[1] - tournament.buyIn;
       }
-      if (name === tournament.third) {
-        profit += tournament.moneyThird - tournament.buyIn;
+      if (name === tournament.participants[2]) {
+        profit += tournament.payOut[2] - tournament.buyIn;
       }
       prev.push(profit);
       return prev;

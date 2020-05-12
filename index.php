@@ -28,11 +28,11 @@ $ranking->loadTournaments();
 
 //$ranking->printTournaments();
 $ranking->printRankingProfit();
-//echo '<pre>'.print_r(($ranking), true).'</pre>'; 
+//echo '<pre>'.print_r($ranking->getRankingData()).'</pre>'; 
 
 ?>
 
-<div id="chart-container" style="width:100%; height:400px;"></div>
+<div id="chart-container" style="width:100%; height:800px;"></div>
 
 </body>
 </html>
