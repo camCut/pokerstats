@@ -48,26 +48,15 @@ function renderRankingChart2() {
 }
 
 function renderTournamentChart() {
-  const series = Object.keys(rankingData).map(name => ({
-    name: name, data: tournamentData.reduce((prev, tournament) => {
-      let profit = prev.length === 0 ? 0 : prev[prev.length - 1];
-      if (name === tournament.participants[0]) {
-        profit += tournament.payOut[0] - tournament.buyIn;
-      }
-      if (name === tournament.participants[1]) {
-        profit += tournament.payOut[1] - tournament.buyIn;
-      }
-      if (name === tournament.participants[2]) {
-        profit += tournament.payOut[2] - tournament.buyIn;
-      }
-      prev.push(profit);
-      return prev;
-    }, []),
+  const playerNames = Object.keys(rankingData);
+  const series = playerNames.map(name => ({
+    name: name, 
+    data: getTournamentData(name),
   }));
-
+console.log(series[1]);
   Highcharts.chart('chart-container', {
     chart: {
-      type: 'spline',
+      type: 'areaspline',
     },
     title: {
       text: 'Player Profit',
@@ -84,7 +73,27 @@ function renderTournamentChart() {
     
   });
 }
-
+function getTournamentData(name) {
+  return tournamentData.reduce((prev, tournament) => {
+    if(tournament.participants.includes(name)) {
+      const playerIndex = tournament.participants.findIndex((participantName) => (participantName === name));
+      let playerMoney = 0;
+      let startMoney = 0;
+      if(prev.length > 0){
+            startMoney = prev[prev.length - 1].y;
+      }
+      if(playerIndex < tournament.payOut.length){
+        playerMoney = tournament.payOut[playerIndex];
+      }
+      const profit = startMoney + playerMoney - tournament.buyIn;
+      prev.push({
+        x: tournament.date,
+        y: profit,
+      });
+    }
+    return prev;
+  }, []);
+}
 
 document.addEventListener('DOMContentLoaded', function () {
   renderTournamentChart();

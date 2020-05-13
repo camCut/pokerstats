@@ -10,13 +10,16 @@ $data_results = file_get_contents('tournaments.json');
 $tempArray = json_decode($data_results);
 
 $tournaments = [];
+echo $csv[2][1] . "-" . $csv[3][1];
 for($i = 1; $i<count($csv[12]); $i+=8)
 {
     //var_dump($csv[12][$i]);
 
     $tournament = new Tournament();
+    $dateTimeString = $csv[2][$i] . "-" . $csv[3][$i];
+    $dateTime = DateTime::createFromFormat('d.m.Y-H:i', $dateTimeString);
 
-    $tournament->date = strtotime($csv[2][$i]);
+    $tournament->date = $dateTime ? $dateTime->getTimestamp() : 0;
     $tournament->buyIn = (int)$csv[6][$i];
     //add participants
     $tournament->participants = [];
@@ -32,7 +35,7 @@ for($i = 1; $i<count($csv[12]); $i+=8)
      if($csv[$s][$i+4] != "")
      {
        
-        array_push($tournament->payOut, $csv[$s][$i+1]);
+        array_push($tournament->payOut, floatval($csv[$s][$i+1]));
     }
 
         

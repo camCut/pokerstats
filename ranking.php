@@ -20,68 +20,80 @@ class Ranking
         foreach ($this->tournaments as $tournament) {
             $participants = $tournament->participants;
 
+            $i = 0;
             foreach ($participants as $participant) {
                 if (!array_key_exists($participant, $ranking)) {
                     $ranking[$participant] = array('name' => $participant, 'totalWins' => 0, 'totalSecond' => 0, 'totalThird' => 0, 'totalSitIn' => 0, 'totalMoney' => 0, 'totalProfit' => 0, 'headsUp' => 0);
                 }
                 $ranking[$participant]['totalProfit'] -= $tournament->buyIn;
+                $ranking[$participant]['totalSitIn']++;
+                
+                if($i < sizeof($tournament->payOut)){
+                    $ranking[$participant]['totalMoney'] += intval($tournament->payOut[$i]);
+                    $ranking[$participant]['totalProfit'] += intval($tournament->payOut[$i]);
+                }
 
-                    
-                $i = 0;
-
-                    if ($tournament->participants[$i] == $participant  && $tournament->payOut[$i] != "" ) {
-                        //$ranking[$participant]['headsUp']++;             
-                            $ranking[$participant]['totalMoney'] += intval($tournament->payOut[$i]);
-                            $ranking[$participant]['totalProfit'] += intval($tournament->payOut[$i]);
-                            $ranking[$participant]['totalSitIn'] ++;
-                    }
-
-                    if($tournament->participants[0] == $participant ){
+                switch ($i){                                            
+                    case (0):
                             $ranking[$participant]['totalWins'] ++;
                             $ranking[$participant]['headsUp'] ++;
-                            $ranking[$participant]['totalSitIn'] ++;
-                    }
+                            break;
 
-                    if($tournament->participants[1] == $participant ){
-                            $ranking[$participant]['totalSecond'] ++;
-                            $ranking[$participant]['headsUp'] ++;
-                            $ranking[$participant]['totalSitIn'] ++;
-                    }
+                    case (1):
+                        $ranking[$participant]['totalSecond'] ++;
+                        $ranking[$participant]['headsUp'] ++;
+                        break;
 
-                    if($tournament->participants[2] == $participant ){
-                            $ranking[$participant]['totalThird'] ++;
-                            $ranking[$participant]['totalSitIn'] ++;
-                    }
-
-                    if ($tournament->participants[$i] == $participant) {
-                            $ranking[$participant]['totalSitIn'] ++;
-                            $i++;                            
-                    }
+                    case (2):
+                        $ranking[$participant]['totalThird'] ++;
+                        break; 
+                    
             }
+            $i++;
 
-            //echo '<pre>';
-            //var_dump($ranking);
-            //echo '</pre>';
+
+            }
+        
+      /*   echo '<pre>';
+        var_dump($ranking);
+        echo '</pre>'; */
+
         }
+        
         return $ranking;
-
     }
 
-    function sortProfit($ranking, $property = 'totalProfit')
+    function sortRanking($ranking, $property = 'totalProfit')
     {
-        usort($ranking, function ($a, $b) use ($property) {
-            if ($a[$property] < $b[$property]) {
-                return 1;
-            }
-            if ($a[$property] > $b[$property]) {
-                return -1;
-            }
-            return 0;
-        });
+        if($property != 'name'){
+            usort($ranking, function ($a, $b) use ($property) {
+                if (strtolower($a[$property]) < strtolower($b[$property])) {
+                    return 1;
+                }
+                if (strtolower($a[$property]) > strtolower($b[$property])) {
+                    return -1;
+                }
+                return 0;
+            });
 
-        return $ranking;
+            return $ranking;
+        }
+        else{
+            usort($ranking, function ($a, $b) use ($property) {
+                if (strtolower($a[$property]) < strtolower($b[$property])) {
+                    return -1;
+                }
+                if (strtolower($a[$property]) > strtolower($b[$property])) {
+                    return 1;
+                }
+                return 0;
+            });
+
+            return $ranking;
+        }
 
     }
+
 
 
     function isParticipantinRanking($participant)
@@ -92,23 +104,30 @@ class Ranking
 
     function printRankingProfit()
     {
+        
         $ranking = $this->calculateRanking();
-        $ranking = $this->sortProfit($ranking);
+        if(!isset($_GET['sortBy']) ){
+            $ranking = $this->sortRanking($ranking);
+        }
+        else{
+            $ranking = $this->sortRanking($ranking, $_GET['sortBy']);
+        }
 
         $rows = ["<tr>
-                <th>Name</th>
-                <th>TotalWins</th>
-                <th>TotalSecond</th>
-                <th>TotalThird</th>
-                <th>Teilnahmen</th>
-                <th>Preisgeld</th>
-                <th>Profit</th>
-                <th>HeadsUp</th>
+                <th><a href='./index.php?sortBy=name'>Name</a></th>
+                <th><a href='./index.php?sortBy=totalWins'>TotalWins</a></th>
+                <th><a href='./index.php?sortBy=totalSecond'>TotalSecond</a></th>
+                <th><a href='./index.php?sortBy=totalThird'>TotalThird</a></th>
+                <th><a href='./index.php?sortBy=totalSitIn'>Teilnahmen</a></th>
+                <th><a href='./index.php?sortBy=totalMoney'>Preisgeld</a></th>
+                <th><a href='./index.php?sortBy=totalProfit'>Profit</a></th>
+                <th><a href='./index.php?sortBy=headsUp'>HeadsUp</a></th>
                 <th>HeadsUp Quote</th>
             </tr>"];
 
-
+$profitSum = 0;
         foreach ($ranking as $key => $row) {
+            $profitSum +=  $row['totalProfit'];
             $rowClass = $this->getRowClass($key);
 
             $rows[] = "<tr class='" . $rowClass . "'>
@@ -123,7 +142,7 @@ class Ranking
                     <td>" .intval($row['headsUp'] / $row['totalSitIn'] * 100) . "%</td>
                     </tr>";
         }
-
+        echo $profitSum;
         echo "<table><th>Profit nach " . count($this->tournaments) . " Turnieren</th>" . implode('', $rows) . "</table>";
     }
 
