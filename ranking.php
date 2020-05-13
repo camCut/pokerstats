@@ -54,7 +54,7 @@ class Ranking
 
             }
         
-      /*   echo '<pre>';
+/*         echo '<pre>';
         var_dump($ranking);
         echo '</pre>'; */
 

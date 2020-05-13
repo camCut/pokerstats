@@ -2,9 +2,13 @@ body {
     padding: 2px;
     font-size: 12px;
 }
+a {
+    color: #000000;
+    text-decoration: underline;
 
+}
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid #C0C0C0;
 }
 
 td {
@@ -16,16 +20,16 @@ th {
 
 }
 tr.first {
-    background-color: gold;
+    background-image: linear-gradient(yellow, gold);
 }
 tr.second {
-    background-color: silver;
+    background-image: linear-gradient(#FFF5EE, #C0C0C0);
 }
 tr.third {
-    background-color: burlywood;
+    background-image: linear-gradient(#F4A460, #CD853F);
 }
 tr.rest {
-    background-color: green;
+    background-color:  #E0FFFF;
 }
 table {
     margin: 20px;
