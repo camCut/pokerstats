@@ -29,8 +29,8 @@ class Ranking
                 $ranking[$participant]['totalSitIn']++;
                 
                 if($i < sizeof($tournament->payOut)){
-                    $ranking[$participant]['totalMoney'] += intval($tournament->payOut[$i]);
-                    $ranking[$participant]['totalProfit'] += intval($tournament->payOut[$i]);
+                    $ranking[$participant]['totalMoney'] += $tournament->payOut[$i];
+                    $ranking[$participant]['totalProfit'] += $tournament->payOut[$i];
                 }
 
                 switch ($i){                                            
@@ -102,7 +102,7 @@ class Ranking
     }
 
 
-    function printRankingProfit()
+    function printRanking()
     {
         
         $ranking = $this->calculateRanking();
@@ -115,9 +115,9 @@ class Ranking
 
         $rows = ["<tr>
                 <th><a href='./index.php?sortBy=name'>Name</a></th>
-                <th><a href='./index.php?sortBy=totalWins'>TotalWins</a></th>
-                <th><a href='./index.php?sortBy=totalSecond'>TotalSecond</a></th>
-                <th><a href='./index.php?sortBy=totalThird'>TotalThird</a></th>
+                <th><a href='./index.php?sortBy=totalWins'>Siege</a></th>
+                <th><a href='./index.php?sortBy=totalSecond'>Zweiter</a></th>
+                <th><a href='./index.php?sortBy=totalThird'>Dritter</a></th>
                 <th><a href='./index.php?sortBy=totalSitIn'>Teilnahmen</a></th>
                 <th><a href='./index.php?sortBy=totalMoney'>Preisgeld</a></th>
                 <th><a href='./index.php?sortBy=totalProfit'>Profit</a></th>
@@ -125,25 +125,62 @@ class Ranking
                 <th>HeadsUp Quote</th>
             </tr>"];
 
-$profitSum = 0;
         foreach ($ranking as $key => $row) {
-            $profitSum +=  $row['totalProfit'];
             $rowClass = $this->getRowClass($key);
-
+            if($row['totalWins'] == 0) {
+                $headsUpQuote = 0;
+            }
+            if($row['totalWins'] != 0){
+                $headsUpQuote = $row['totalWins'] / $row['headsUp'] * 100;
+            }
             $rows[] = "<tr class='" . $rowClass . "'>
                     <td>" . $row['name'] . "</td>
                     <td>" . $row['totalWins'] . "</td>
                     <td>" . $row['totalSecond'] . "</td>
                     <td>" . $row['totalThird'] . "</td>
                     <td>" . $row['totalSitIn'] . "</td>
-                    <td>" . $row['totalMoney'] . "&euro;</td>
+                    <td>" . $row['totalMoney']  . "&euro;</td>
                     <td>" . $row['totalProfit'] . "&euro;</td>
                     <td>" . $row['headsUp'] . "</td>
-                    <td>" .intval($row['headsUp'] / $row['totalSitIn'] * 100) . "%</td>
+                    <td>" .intval($headsUpQuote) . "%</td>
                     </tr>";
         }
-        echo $profitSum;
-        echo "<table><th>Profit nach " . count($this->tournaments) . " Turnieren</th>" . implode('', $rows) . "</table>";
+        
+        $currentDate = $this->tournaments[count($this->tournaments)-1]->date;
+        echo "<table><th>";
+
+        if(isset($_GET['sortBy'])){
+            echo $this->tableTitle($_GET['sortBy']);
+        }
+        else{
+            echo 'Profit';
+        }
+        echo " nach " . count($this->tournaments) . " Turnieren (Stand: ".date('d/m/Y H:i:s', $currentDate).")</th>" . implode('', $rows) . "</table>";
+    }
+
+    
+    function tableTitle($key)
+    {
+        switch ($key) {
+            case 'name':
+                return 'Teilnehmer';
+            case 'totalWins':
+                return 'Siege';
+            case 'totalSecond':
+                return 'Zweiter';
+            case 'totalThird':
+                return 'Dritter';
+            case 'totalSitIn':
+                return 'Teilnahmen';
+            case 'totalMoney':
+                return 'Preisgeld';
+            case 'totalProfit':
+                return 'Profit';
+            case 'headsUp':
+                return 'HeadsUp';
+            default:
+                return 'rest';
+        }
     }
 
     function getRowClass($key)

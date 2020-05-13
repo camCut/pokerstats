@@ -5,12 +5,34 @@ require "./ranking.php";
 $csv = array_map('str_getcsv', file('turnier.csv'));
 
 
+/* function sortbyDate($data, $property = 'date')
+{
+    usort($ranking, function ($a, $b) use ($property) {
+        if ($a[$property] < $b[$property]) {
+            return 1;
+        }
+        if ($a[$property] > $b[$property]) {
+            return -1;
+        }
+        return 0;
+    });
+
+    return $data;
+
+} */
+
+
 //open or read json data
 $data_results = file_get_contents('tournaments.json');
 $tempArray = json_decode($data_results);
 
+//$tempArraySorted = sortbyDate($tempArray);
 $tournaments = [];
-echo $csv[2][1] . "-" . $csv[3][1];
+
+$dateTimeString = $csv[2][9] . "-" . $csv[3][9];
+$dateTime = DateTime::createFromFormat('d.m.Y-H:i', $dateTimeString);
+
+
 for($i = 1; $i<count($csv[12]); $i+=8)
 {
     //var_dump($csv[12][$i]);
@@ -48,12 +70,17 @@ for($i = 1; $i<count($csv[12]); $i+=8)
 
 }
 
+function cmp($a, $b) {
+    return strcmp($a->date, $b->date);
+}
 
-
+$tournamentsSorted = usort($tempArray, "cmp");
 
 echo '<pre>';
-var_dump($tournaments);
-echo'</pre>';
+var_dump($tempArray);
+echo '</pre>';
+
+
 $jsonData = json_encode($tempArray, JSON_PRETTY_PRINT);
 
 file_put_contents('tournaments.json', $jsonData);   

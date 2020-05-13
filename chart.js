@@ -55,14 +55,36 @@ function renderTournamentChart() {
   }));
 console.log(series[1]);
   Highcharts.chart('chart-container', {
+    /* plotOptions: {
+      series: {
+          // general options for all series
+          
+      },
+      areaspline: {
+          // shared options for all areaspline series
+      }
+  }, */
     chart: {
-      type: 'areaspline',
+      type: 'spline',
     },
+    
     title: {
       text: 'Player Profit',
     },
     xAxis: {
-      categories: tournamentData.map(tournament => new Date(tournament.date * 1000).toDateString()),
+      labels: {
+        formatter: obj => new Date(obj.value * 1000).toDateString()
+      },
+      //categories: tournamentData.map(tournament => new Date(tournament.date * 1000).toDateString()),
+    },
+    tooltip: {
+      formatter: function () {
+        console.log();
+        return `
+<b>${this.series.name}</b><br/>
+Date: ${new Date(this.x * 1000).toDateString()} <br/>
+Profit: ${this.y} €`;
+      },
     },
     yAxis: {
       title: {
